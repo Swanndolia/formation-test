@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+</head>
+<body>
+<h1>Students list</h1>
+<nav>
+    <a th:href="@{/}">Home Page</a>
+</nav>
+
+<div>
+    <ul>
+        <li th:each="student : ${students}">
+            <a th:href="@{/students/{id}(id = ${student.getId})}"> <span
+                    th:text="${student.getFirstName() + ' ' + student.getLastName()}"></span></a>
+            <a th:href="@{/students/add(${student.getId()})}">Edit student</a>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
