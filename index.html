@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <label>
+        <input type="textarea" placeholder="Recherchez un pokémon ici..." id="search">
+        <button id="searchBtn">Search</button>
+    </label>
+    <main>
+        <button onclick="getNextPokemon(-1)">
+            < </button>
+                <div>
+                    <span>
+                        <div>
+                            <figure>
+                                <img id="pokePicture" />
+                            </figure>
+                            <span id="pokeEvo"></span>
+                        </div>
+                        <div>
+                            <p id="pokemonName">
+
+                            </p>
+                            <span>
+                                <p id="pokeWeight">
+
+                                </p>
+                                <p id="pokeSize">
+
+                                </p>
+                            </span>
+                            <span id="pokeType1">
+
+                            </span>
+                            <span id="pokeType2">
+
+                            </span>
+                        </div>
+                    </span>
+                    <div>
+                        <span id="pokeAbilities1"></span>
+                        <span id="pokeAbilities2"></span>
+                    </div>
+                </div>
+                <button onclick="getNextPokemon(1)"> > </button>
+    </main>
+</body>
+
+</html>
